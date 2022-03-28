@@ -1,0 +1,7 @@
+#data{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 55px;
+justify-content: center;
+}
