@@ -1,16 +1,18 @@
 async function getCountries() {
-    
+
     var content = document.getElementById("data")
-    
+
     try {
         var res = await fetch("https://restcountries.com/v3.1/all");
         var data = await res.json();
         // console.log(data)
 
+        buscador(data)
+
         var total = data.length;
         for (var i = 0; i < total; i++) {
             // console.log(i)
-        content.innerHTML += `
+            content.innerHTML += `
         <div class="${i}" style="width: fit-content;
             display: flex;
             flex-direction: column;
